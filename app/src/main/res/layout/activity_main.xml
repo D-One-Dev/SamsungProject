@@ -7,36 +7,42 @@
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonFind"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonFind"
+        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/buttonAdd"
         android:text="Добавить слово"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="75dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdd"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlay"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/buttonFind"
         android:text="Найти слово"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="75dp"
-        app:layout_constraintTop_toTopOf="@id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonFind"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/buttonPlay"
         android:text="Тренировка"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

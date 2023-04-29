@@ -42,21 +42,28 @@ public class addActivity extends AppCompatActivity {
         finish();
     }
 
-    private void addWord(){
+    private void addWord() {
         EditText editTextWord = findViewById(R.id.editTextWord);
         EditText editTextTranslation = findViewById(R.id.editTextTranslation);
         String word = editTextWord.getText().toString().toLowerCase(Locale.ROOT);
         String translation = editTextTranslation.getText().toString().toLowerCase(Locale.ROOT);
 
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
+        if (!word.isEmpty() && !translation.isEmpty()) {
+            SQLiteDatabase database = dbHelper.getWritableDatabase();
+            ContentValues contentValues = new ContentValues();
 
-        contentValues.put(DBHelper.COLUMN_WORD, word);
-        contentValues.put(DBHelper.COLUMN_TRANSLATION, translation);
+            contentValues.put(DBHelper.COLUMN_WORD, word);
+            contentValues.put(DBHelper.COLUMN_TRANSLATION, translation);
 
-        database.insert(DBHelper.TABLE_NAME, null, contentValues);
+            database.insert(DBHelper.TABLE_NAME, null, contentValues);
 
-        Toast toast = Toast.makeText(this, "Success!", Toast.LENGTH_SHORT);
-        toast.show();
+            Toast toast = Toast.makeText(this, "Success!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+        else{
+            Toast toast = Toast.makeText(this, "Please input word and try again", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }

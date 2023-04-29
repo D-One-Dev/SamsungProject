@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="14dp"
+        android:textSize="24dp"
         />
 
     <Button
@@ -27,14 +27,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 
     <EditText
         android:id="@+id/editTextWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="5"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:hint="Слово"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="5"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:hint="Перевод"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

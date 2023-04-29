@@ -9,12 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GAMEMEME"
+        android:text="Здесь будет игра"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="32dp"/>
+        android:textSize="24dp"/>
 
     <Button
         android:id="@+id/buttonBack"
@@ -25,5 +25,5 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

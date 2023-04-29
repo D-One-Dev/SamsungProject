@@ -6,15 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".FindActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextFindWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AAAAAAA"
+        android:ems="5"
+        android:inputType="text"
+        android:hint="Слово"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextFindTranslation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24dp"/>
+    <EditText
+        android:id="@+id/editTextFindTranslation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="text"
+        android:hint="Перевод"
+        app:layout_constraintTop_toBottomOf="@id/editTextFindWord"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="32dp"/>
+        android:textSize="24dp"/>
+
+    <Button
+        android:id="@+id/buttonFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Найти"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextFindTranslation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="24dp"/>
 
     <Button
         android:id="@+id/buttonBack"
@@ -25,6 +53,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:textSize="14dp"/>
+        android:textSize="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
